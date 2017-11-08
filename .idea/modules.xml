@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/giflibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/giflibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/giflibrary_main.iml" filepath="$PROJECT_DIR$/.idea/modules/giflibrary_main.iml" group="giflibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/giflibrary_test.iml" filepath="$PROJECT_DIR$/.idea/modules/giflibrary_test.iml" group="giflibrary" />
+    </modules>
+  </component>
+</project>
