@@ -1,5 +1,6 @@
 package com.rajatsingh.giblibrary.config;
 
+import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +26,20 @@ public class DataConfig {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setConfigLocations(config);
         sessionFactory.setPackagesToScan(env.getProperty("giflib.entity.package"));
+        sessionFactory.setDataSource(dataSource());
         return sessionFactory;
+    }
+
+    @Bean
+    public javax.sql.DataSource dataSource()
+    {
+        BasicDataSource ds = new BasicDataSource();
+
+        ds.setDriverClassName(env.getProperty("giflib.db.driver"));
+        ds.setUrl(env.getProperty("giflib.db.url"));
+        ds.setUsername(env.getProperty("giflib.db.username"));
+
+        return ds;
     }
 
 }
